@@ -1,7 +1,7 @@
 Package: ggasym
 Type: Package
 Title: Asymmetric Matrix Plotting in 'ggplot2'
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: person(c("Joshua", "H"), "Cook", email = "joshuacook0023@gmail.com",
     role = c("aut", "cre"),
     comment = c(ORCID = "0000-0001-9815-6879"))
@@ -28,8 +28,8 @@ Collate: 'asymmetrise.R' 'asymmetrise_stats.R' 'geom_asymmat.R'
         'ggasym.R' 'scale_continuous_asym.R' 'scale_fill_gradient.R'
         'utils.R'
 NeedsCompilation: no
-Packaged: 2019-03-13 13:48:42 UTC; admin
+Packaged: 2019-03-23 16:32:29 UTC; admin
 Author: Joshua H Cook [aut, cre] (<https://orcid.org/0000-0001-9815-6879>)
 Maintainer: Joshua H Cook <joshuacook0023@gmail.com>
 Repository: CRAN
-Date/Publication: 2019-03-15 16:50:02 UTC
+Date/Publication: 2019-03-23 16:50:03 UTC

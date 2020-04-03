@@ -1,4 +1,4 @@
-## ----setup, include = FALSE----------------------------------------------
+## ----setup, include = FALSE---------------------------------------------------
 knitr::opts_chunk$set(
     collapse = TRUE,
     comment = "#>",
@@ -7,16 +7,16 @@ knitr::opts_chunk$set(
     fig.align = "center"
 )
 
-## ----load_libs, warning=FALSE, message=FALSE-----------------------------
+## ----load_libs, warning=FALSE, message=FALSE----------------------------------
 library(ggasym)
 library(corrr)
 library(ggplot2)
 library(dplyr)
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 head(mtcars)
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 # Pearson correlation
 pear <- corrr::correlate(mtcars, method = "pearson", quiet= TRUE) %>%
     corrr::shave(upper = TRUE) %>% 
@@ -30,18 +30,18 @@ spear <- corrr::correlate(mtcars, method = "spearman", quiet= TRUE) %>%
     stats::na.omit() %>% 
     dplyr::rename(spearman_r = "r")
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 df <- dplyr::full_join(pear, spear, by = c("x", "y")) %>%
     ggasym::asymmetrise(x, y)
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 ggplot(df) +
     geom_asymmat(aes(x = x, y = y,
                      fill_tl = pearson_r, fill_br = spearman_r)) +
     scale_fill_tl_distiller(type = "div", palette = "RdYlBu") +
     scale_fill_br_distiller(type = "div", palette = "RdYlBu")
 
-## ----plotting------------------------------------------------------------
+## ----plotting-----------------------------------------------------------------
 ggplot(df) +
     geom_asymmat(aes(x = x, y = y,
                      fill_tl = pearson_r, fill_br = spearman_r)) +

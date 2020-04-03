@@ -1,4 +1,4 @@
-## ----setup, include = FALSE----------------------------------------------
+## ----setup, include = FALSE---------------------------------------------------
 knitr::opts_chunk$set(
     collapse = TRUE,
     comment = "#>",
@@ -8,7 +8,7 @@ knitr::opts_chunk$set(
 )
 set.seed(0)
 
-## ----load_libs, warning=FALSE, message=FALSE-----------------------------
+## ----load_libs, warning=FALSE, message=FALSE----------------------------------
 library(dplyr)
 library(ggplot2)
 library(tibble)
@@ -16,7 +16,7 @@ library(purrr)
 library(broom)
 library(ggasym)
 
-## ----make_data-----------------------------------------------------------
+## ----make_data----------------------------------------------------------------
 n_reps <- 10  # number of measurements per gene
 expt_std_dev <- 1.5  # std. dev. of measurements
 genes <- c("FAK", "talin", "paxillin", "vinculin", "B1integrin", "kindlin")
@@ -33,25 +33,25 @@ expr_data <- expr_data %>%
                              sd = expt_std_dev))
 head(expr_data)
 
-## ----anova---------------------------------------------------------------
+## ----anova--------------------------------------------------------------------
 res_aov <- aov(expt_expr ~ gene, data = expr_data)
 broom::tidy(res_aov)
 
-## ----tucky---------------------------------------------------------------
+## ----tucky--------------------------------------------------------------------
 tukey_res <- TukeyHSD(res_aov)
 tukey_res
 
-## ----prep_results--------------------------------------------------------
+## ----prep_results-------------------------------------------------------------
 asymmat_tib <- asymmetrise_stats(tukey_res)
 head(asymmat_tib)
 
-## ----plot_res_basic------------------------------------------------------
+## ----plot_res_basic-----------------------------------------------------------
 ggplot(asymmat_tib, aes(x = x, y = y)) +
     geom_asymmat(aes(fill_tl = estimate, fill_br = -log(adj.p.value))) +
     scale_fill_tl_gradient2(low = "dodgerblue", high = "tomato") +
     scale_fill_br_distiller(type = "seq", palette = "Greens", direction = 1)
 
-## ----plot_res_full-------------------------------------------------------
+## ----plot_res_full------------------------------------------------------------
 ggplot(asymmat_tib, aes(x = x, y = y)) +
     geom_asymmat(aes(fill_tl = estimate, fill_br = -log(adj.p.value))) +
     scale_fill_tl_gradient2(low = "dodgerblue", high = "tomato",

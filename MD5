@@ -1,6 +1,6 @@
-b74ed678de6f1a33a464638b0cc4852c *DESCRIPTION
+4ded8762586c0da94cddea2b7944886b *DESCRIPTION
 a34e8b34fb243a0c64e1aeb104f024a5 *NAMESPACE
-3b4842f897eac99fcbd976db02e5aaef *NEWS.md
+87426d4cecf1248b32c5ef8ca7f3ecab *NEWS.md
 c5c139add84c769630f54de784a17d93 *R/asymmetrise.R
 ede0e736489daf0ef2ef342fa7d49730 *R/asymmetrise_stats.R
 3631198ded0c39484a772db590337c3e *R/geom_asymmat.R
@@ -8,14 +8,14 @@ ede0e736489daf0ef2ef342fa7d49730 *R/asymmetrise_stats.R
 ccfe79605d6c99e4c6af20bffd6fecba *R/scale_continuous_asym.R
 ab690684d1f7e175f7060f1743e7782b *R/scale_fill_gradient.R
 8aeed31a886cadb4f0219d0feaf76c4d *R/utils.R
-b0a68642ba8b9274271d5060fe75f85d *build/vignette.rds
+ac1389a356ab6bc32af3fb7706f6ad1e *build/vignette.rds
 38599c67004e3e769fe213399f99a2a0 *inst/WORDLIST
 b565ed81e9a6b05b2af055429817a09f *inst/doc/ggasym-corrr.R
 b0339edcdcfa74faa2e85c30452a1e99 *inst/doc/ggasym-corrr.Rmd
-651e41520a7d23bfc16edbb3c3d44ac2 *inst/doc/ggasym-corrr.html
+8903bd707f5df87ccfc8670eff5b27bb *inst/doc/ggasym-corrr.html
 746ec19bfa4b9642ee424cf0d49a9360 *inst/doc/ggasym-stats.R
 7b6d3acf2b6e8b0312b0db500c7b0812 *inst/doc/ggasym-stats.Rmd
-82b4b677efa1411d3907ef406ded31b2 *inst/doc/ggasym-stats.html
+67c73e5888b545ca7c156199a226d819 *inst/doc/ggasym-stats.html
 ae3d19c92901e654f42cf796a0fd0199 *man/GeomAsymmat.Rd
 90fb613bb50e209336644c050d0cd4ff *man/add_missing_combinations.Rd
 74f7c08debea9d48fa5a54ff6a6e568a *man/asymmetrise.Rd
@@ -43,7 +43,7 @@ b057d02c1f919b345306517118bffefa *man/which_level.Rd
 0622a97a2aaa3c342f09636052c2d7f5 *tests/spelling.R
 1112698f2786d2ea63c64b506bafbdba *tests/testthat.R
 200bfbf4f92bd4dffcd3901774748b40 *tests/testthat/test-asymmetrise.R
-bfedfd675870e2dae7da4ddc0810d827 *tests/testthat/test-asymmetrise_stats.R
+44c2a6b3b5d2235153a55864e3e6c124 *tests/testthat/test-asymmetrise_stats.R
 abb8e5e111ec2ed9d041e386b498dd50 *tests/testthat/test-geom_asymmat.R
 7f5721420674a824eb26cbb1e9ae8357 *tests/testthat/test-scale_continuous_asym.R
 581c1043498cf4f2dddfd044b9d25008 *tests/testthat/test-utils.R
